@@ -1,0 +1,10 @@
+{
+  "description": "Create and customize apps effortlessly with an intuitive platform designed for users seeking quick, no-code solutions to bring ideas to life.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

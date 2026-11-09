@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Inter', system-ui, sans-serif;
+  --color-navy: #073B4C;
+  --color-brand-cyan: #3FC2E5;
+  --color-brand-teal: #19B5A5;
+  --color-brand-sky: #87D8EA;
+  --color-safe: #34C759;
+  --color-warn: #FF9F0A;
+  --color-danger: #FF3B30;
+  --color-appbg: #F2F2F7;
+  --color-apptext: #102A36;
+  --color-muted: #607580;
+  --color-app-border: #D9E7EC;
+  --color-disabled: #AABCC3;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
+  background: #F2F2F7;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar { width: 0; height: 0; }
+* { scrollbar-width: none; }
+
+.hero-sky, .sky-header {
+  background: linear-gradient(180deg, #A5DDF0 0%, #CFEDF8 100%);
+}
+.hero-sky { border-bottom-left-radius: 36px; border-bottom-right-radius: 36px; }
+.hero-red {
+  background: linear-gradient(180deg, #FF453A 0%, #FF6B61 100%);
+  border-bottom-left-radius: 36px;
+  border-bottom-right-radius: 36px;
+}
+.glass-card {
+  background: rgba(255, 255, 255, 0.68);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+  border-radius: 26px;
+  box-shadow: 0 8px 24px rgba(7, 59, 76, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 0 0 0.5px rgba(255, 255, 255, 0.7);
+}
+.glass-bar {
+  background: rgba(255, 255, 255, 0.62);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  backdrop-filter: blur(28px) saturate(200%);
+  box-shadow: 0 10px 30px rgba(7, 59, 76, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.95), inset 0 0 0 0.5px rgba(255, 255, 255, 0.7);
+}
+button.py-4, button.py-3\.5 { border-radius: 9999px; font-weight: 600; }
+button { transition: transform 0.15s ease, opacity 0.15s ease; }
+button:active { transform: scale(0.97); }
+:root { --safe-top: max(env(safe-area-inset-top, 0px), 40px); }
+
+/* iOS controls */
+.ios-switch { width: 51px; height: 31px; border-radius: 9999px; background: rgba(120,120,128,0.32); position: relative; flex-shrink: 0; transition: background .25s; }
+.ios-switch::after { content: ''; position: absolute; top: 2px; left: 2px; width: 27px; height: 27px; border-radius: 50%; background: #fff; box-shadow: 0 3px 8px rgba(0,0,0,.15), 0 1px 1px rgba(0,0,0,.16); transition: transform .25s cubic-bezier(.3,.7,.4,1); }
+.ios-switch[aria-checked='true'] { background: #34C759; }
+.ios-switch[aria-checked='true']::after { transform: translateX(20px); }
+.ios-chip { padding: 7px 14px; border-radius: 9999px; font-size: 14px; font-weight: 600; white-space: nowrap; background: rgba(120,120,128,0.14); color: #3C3C43; }
+.ios-chip[aria-pressed='true'] { background: #19B5A5; color: #fff; }
+.ios-section { font-size: 13px; color: #6C6C70; text-transform: uppercase; padding: 0 16px 6px; }
+.ios-group { background: #fff; border-radius: 20px; overflow: hidden; }
+.ios-row { display: flex; align-items: center; gap: 12px; padding: 10px 16px; min-height: 48px; position: relative; width: 100%; text-align: left; }
+.ios-row + .ios-row::before { content: ''; position: absolute; top: 0; left: 58px; right: 0; height: 0.5px; background: rgba(60,60,67,0.29); }
+.ios-icon { width: 30px; height: 30px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.ios-grabber { width: 36px; height: 5px; border-radius: 9999px; background: rgba(60,60,67,0.3); margin: 0 auto 14px; }
+.ios-alert { background: rgba(255,255,255,0.86); -webkit-backdrop-filter: blur(30px) saturate(180%); backdrop-filter: blur(30px) saturate(180%); border-radius: 14px; overflow: hidden; width: 100%; max-width: 300px; text-align: center; }
+.ios-alert-btn { display: block; width: 100%; padding: 12px; font-size: 17px; border-top: 0.5px solid rgba(60,60,67,0.29); border-radius: 0 !important; background: transparent; }
